@@ -122,9 +122,19 @@
 ### BUT! Make sure it's executable first: chmod +x ufetch-*   ###
 ### If your distro is missing; use the generic Linux Tux ver. ###
 ###                                                           ###
+### 'ufetch-raspbian' is my own selected ufetch distro file - ###
+### choose your own & place it in /usr/bin/ with prepend sudo ###
+### Ctrl + F(ind) / W: ufetch-raspbian -- replace w/ your own ###
+###                                                           ###
 ###                                                           ###
 ### For bot owner/master use only, add an m flag to-          ###
 ### -both sides of pipe in the script below like so: m|m      ###
+###                                                           ###
+### Note: by default, the script will only work for:          ###
+### channel operators; you can change this by editing:        ###
+### "isop" to either: 'ishalfop' or 'isvoice' -               ###
+### I don't recommend lower than voice, but if you need to -  ###
+### just remove appropriate lines entirely from the script    ###
 ###                                                           ###
 ###                                                           ###
 ###              irssi exec test examples below:              ###
@@ -144,9 +154,6 @@
 ### /exec TERM=dumb ufetch--*distro                           ###
 ### /exec -out TERM=dumb ufetch-*distro                       ###
 ###                                                           ###
-### 'ufetch-raspbian' is my own selected ufetch distro file - ###
-### choose your own & place it in /usr/bin/ with prepend sudo ###
-### Ctrl + F(ind) / W: ufetch-raspbian -- replace w/ your own ###
 ###                                                           ###
 ### If you happen to have an exec issue about an error, or -  ###
 ### have an error display along with your line/s you exec'd,  ###
@@ -155,7 +162,7 @@
 ### TCL exec from this eggdrop script & not irssi's exec      ###
 ###                                                           ###
 #### Public channel bind cmds: !inxipy, !inximore, !st, !uf, ####
-##### !setaf,                                               #####
+##### !ufd,                                                 #####
 ######@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@######
 ##### Pro-tips: I recommend monospace font for best results #####
 ####TERM * linux is colour output, should any exist in script####
@@ -225,16 +232,16 @@ proc do_uf {nick uhost hand chan text} {
       putserv "PRIVMSG $chan :$line"
    }
 }
-bind pub m|m !setaf do_setaf
+bind pub m|m !ufd do_ufd
 
-proc do_setaf {nick uhost hand chan text} {
+proc do_ufd {nick uhost hand chan text} {
         if {![isop $nick $chan]} {
                  putnow "NOTICE $nick :$nick, my guy; you aren't OP'd on $chan, sorry no can do..."
                  return 0
          } else {
    }
-   set my_setaf [set ::env(TERM) dumb ; exec ufetch-linux]
-   foreach line [split my_setaf \n] {
+   set my_ufd [set ::env(TERM) dumb ; exec ufetch-linux]
+   foreach line [split my_ufd \n] {
       putserv "PRIVMSG $chan :$line"
    }
 }

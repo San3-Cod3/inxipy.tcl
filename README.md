@@ -15,81 +15,88 @@
 @@ Coloured read through for convenience. @@
 ! No need to copy this fenced code block.
 - Copy pasteable TCL code further down below.
-+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#
-+########Q:Don't ave noexpire set on Nick? Np, try out CAR########
-+#######CAR stands for Cycle And Renew. Q:Tired of worrying#######
-+######about dropping? CAR runs in BG renewing nicks AUTO4U!######
-+#####         URL: https://github.com/San3-Cod3/CAR         #####
-+####    <Sane> Time registered: Jul 06 07:14:54 2011 EDT!    ####
-+###        CAR -- driving your nicks, into the future!        ###
-+##                                                             ##
-+#                          inxipy.tcl!                          #
-+##                                                             ##
-+###                       VERSION 0.0.1                       ###
-+####                                                         ####
-+##### Please try out my shell script to auto-login to your: #####
-+###### eggdrop bot's spawn telnet version of The Party Line #####
-+####### Send Credentials Auto-Magically: HstIP Port UsrPW #######
-+########        https://github.com/San3-Cod3/SCA-M        #######
-+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#
-+########                                                 ########
-+#######            Created by: Sane from Rizon            #######
-+######                                                     ######
-+#####  sudo apt-get install -y inxi pydf speedtest-cli git  #####
-+####                                                         ####
-+### cd /home/YOU/                                             ###
-+### git clone https://gitlab.com/jschx/ufetch.git             ###
-+### cd /home/YOU/ufetch                                       ###
-+### sudo cp / mv your ufetch-*distro file to /usr/bin/        ###
-+### BUT! Make sure it's executable first: chmod +x ufetch-*   ###
-+### If your distro is missing; use the generic Linux Tux ver. ###
-+###                                                           ###
-+###                                                           ###
-+### For bot owner/master use only, add an m flag to-          ###
-+### -both sides of pipe in the script below like so: m|m      ###
-+###                                                           ###
-+###                                                           ###
-+###              irssi exec test examples below:              ###
-+###                                                           ###
-+###irssi can be exec'd to your open session w/o public output-###
-+###-removing -out flag; exec'd line isn't visible; only to you###
-+###                                                           ###
-+### /exec -out inxi --color 11 --machine | tr "\n" " "        ###
-+### /exec -out pydf ; inxi --cpu --info --system              ###
-+###                                                           ###
-+### /exec -out inxi -G --display ; inxi --network             ###
-+###                                                           ###
-+### /exec -out speedtest --simple | paste -sd% | sed "s/%/ || /g"
-+###                                                           ###
-+### /exec TERM=linux ufetch-*distro                           ###
-+### /exec -out TERM=linux ufetch-*distro                      ###
-+### /exec TERM=dumb ufetch--*distro                           ###
-+### /exec -out TERM=dumb ufetch-*distro                       ###
-+###                                                           ###
-+### 'ufetch-raspbian' is my own selected ufetch distro file - ###
-+### choose your own & place it in /usr/bin/ with prepend sudo ###
-+### Ctrl + F(ind) / W: ufetch-raspbian -- replace w/ your own ###
-+###                                                           ###
-+### If you happen to have an exec issue about an error, or -  ###
-+### have an error display along with your line/s you exec'd,  ###
-+### then try this optional flag: -ignorestderr                ###
-+### - use just after the word exec; BUT this only applies to: ###
-+### TCL exec from this eggdrop script & not irssi's exec      ###
-+###                                                           ###
-+#### Public channel bind cmds: !inxipy, !inximore, !st, !uf, ####
-+##### !setaf,                                               #####
-+######@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@######
-+##### Pro-tips: I recommend monospace font for best results #####
-+####TERM * linux is colour output, should any exist in script####
-+###TERM * dumb is colourless output, regardless of it existing###
-+##The environment that /exec will operate in is not the same as##
-+#  you use; it's cleaned for security reasons I.E there is no-  #
-+#        TERM set by default - it needs to be specified.        #
-+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#
-+#                                                               #
-+##########@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@##########
-+# script #                                             # below! #
-+##########                                             ##########
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#
+########Q:Don't ave noexpire set on Nick? Np, try out CAR########
+#######CAR stands for Cycle And Renew. Q:Tired of worrying#######
+######about dropping? CAR runs in BG renewing nicks AUTO4U!######
+#####         URL: https://github.com/San3-Cod3/CAR         #####
+####    <Sane> Time registered: Jul 06 07:14:54 2011 EDT!    ####
+###        CAR -- driving your nicks, into the future!        ###
+##                                                             ##
+#                          inxipy.tcl!                          #
+##                                                             ##
+###                       VERSION 0.0.1                       ###
+####                                                         ####
+##### Please try out my shell script to auto-login to your: #####
+###### eggdrop bot's spawn telnet version of The Party Line #####
+####### Send Credentials Auto-Magically: HstIP Port UsrPW #######
+########        https://github.com/San3-Cod3/SCA-M        #######
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#
+########                                                 ########
+#######            Created by: Sane from Rizon            #######
+######                                                     ######
+#####  sudo apt-get install -y inxi pydf speedtest-cli git  #####
+####                                                         ####
+### cd /home/YOU/                                             ###
+### git clone https://gitlab.com/jschx/ufetch.git             ###
+### cd /home/YOU/ufetch                                       ###
+### sudo cp / mv your ufetch-*distro file to /usr/bin/        ###
+### BUT! Make sure it's executable first: chmod +x ufetch-*   ###
+### If your distro is missing; use the generic Linux Tux ver. ###
+###                                                           ###
+### 'ufetch-raspbian' is my own selected ufetch distro file - ###
+### choose your own & place it in /usr/bin/ with prepend sudo ###
+### Ctrl + F(ind) / W: ufetch-raspbian -- replace w/ your own ###
+###                                                           ###
+###                                                           ###
+### For bot owner/master use only, add an m flag to-          ###
+### -both sides of pipe in the script below like so: m|m      ###
+###                                                           ###
+### Note: by default, the script will only work for:          ###
+### channel operators; you can change this by editing:        ###
+### "isop" to either: 'ishalfop' or 'isvoice' -               ###
+### I don't recommend lower than voice, but if you need to -  ###
+### just remove appropriate lines entirely from the script    ###
+###                                                           ###
+###                                                           ###
+###              irssi exec test examples below:              ###
+###                                                           ###
+###irssi can be exec'd to your open session w/o public output-###
+###-removing -out flag; exec'd line isn't visible; only to you###
+###                                                           ###
+### /exec -out inxi --color 11 --machine | tr "\n" " "        ###
+### /exec -out pydf ; inxi --cpu --info --system              ###
+###                                                           ###
+### /exec -out inxi -G --display ; inxi --network             ###
+###                                                           ###
+### /exec -out speedtest --simple | paste -sd% | sed "s/%/ || /g"
+###                                                           ###
+### /exec TERM=linux ufetch-*distro                           ###
+### /exec -out TERM=linux ufetch-*distro                      ###
+### /exec TERM=dumb ufetch--*distro                           ###
+### /exec -out TERM=dumb ufetch-*distro                       ###
+###                                                           ###
+###                                                           ###
+### If you happen to have an exec issue about an error, or -  ###
+### have an error display along with your line/s you exec'd,  ###
+### then try this optional flag: -ignorestderr                ###
+### - use just after the word exec; BUT this only applies to: ###
+### TCL exec from this eggdrop script & not irssi's exec      ###
+###                                                           ###
+#### Public channel bind cmds: !inxipy, !inximore, !st, !uf, ####
+##### !ufd,                                                 #####
+######@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@######
+##### Pro-tips: I recommend monospace font for best results #####
+####TERM * linux is colour output, should any exist in script####
+###TERM * dumb is colourless output, regardless of it existing###
+##The environment that /exec will operate in is not the same as##
+#  you use; it's cleaned for security reasons I.E there is no-  #
+#        TERM set by default - it needs to be specified.        #
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#
+#                                                               #
+##########@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@##########
+# script #                                             # below! #
+##########                                             ##########
 ```
 # ![tclcgh](https://user-images.githubusercontent.com/95466780/204167941-45d1f88d-f3a3-4ed1-9b42-17d12c8c3e49.png)$\Large\color{midnightblue}\fbox\{\color{khaki} \color{royalblue}inxi\color{yellow}{py}\color{khaki}.tcl }{ \color{royalblue}\color{yellow}{}\color{khaki} }$
 ```tcl

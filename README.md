@@ -260,4 +260,4 @@ putlog "Sane's inxipy is locked and loaded <3 UwU :<"
 <img align="left" width="1111" height="195" src="https://user-images.githubusercontent.com/95466780/205479933-aabf7cc2-39a8-49e4-8c8d-aa1c6222a9f8.png">
 <img align="left" width="1111" height="161" src="https://user-images.githubusercontent.com/95466780/205475998-fc46bb51-5bfe-4908-ac3a-a5a3aa503f3d.png">
 <img align="left" width="1111" height="77" src="https://user-images.githubusercontent.com/95466780/205475994-26e60314-edd4-4a28-a9fb-ae3e10c3ac9d.png">
-<img align="left" width="1111" height="204" src="https://user-images.githubusercontent.com/95466780/205517198-50ccad43-370a-40fa-b7dc-0d0b3568c4c2.png">
+<img align="left" width="1111" height="237" src="https://user-images.githubusercontent.com/95466780/205518065-b346afda-7e77-4d2b-9ef8-d51890ff57c8.png">

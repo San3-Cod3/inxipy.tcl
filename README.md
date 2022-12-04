@@ -48,6 +48,12 @@
 ### choose your own & place it in /usr/bin/ with prepend sudo ###
 ### Ctrl + F(ind) / W: ufetch-raspbian -- replace w/ your own ###
 ###                                                           ###
+### Might wanna consider editing said: 'ufetch-*distro' file- ###
+### - using your own personal tastes and preferences, e.g.    ###
+### reduce overall lines like condensing info together -      ###
+### - grouped onto the same line, like for instance, SHELL+UI ###
+### or, remove default blank lines; maybe even play w/ colour ###
+###                                                           ###
 ###                                                           ###
 ### For bot owner/master use only, add an m flag to-          ###
 ### -both sides of pipe in the script below like so: m|m      ###
@@ -82,6 +88,7 @@
 ### then try this optional flag: -ignorestderr                ###
 ### - use just after the word exec; BUT this only applies to: ###
 ### TCL exec from this eggdrop script & not irssi's exec      ###
+###                                                           ###
 ###                                                           ###
 #### Public channel bind cmds: !inxipy, !inximore, !st, !uf, ####
 ##### !ufd,                                                 #####

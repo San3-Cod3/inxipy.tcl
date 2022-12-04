@@ -241,7 +241,7 @@ proc do_setaf {nick uhost hand chan text} {
 putlog "Sane's inxipy is locked and loaded <3 UwU :<"
 ```
 
-<img align="left" width="999" height="253" src="https://user-images.githubusercontent.com/95466780/205475330-cce9296c-9890-4ff7-8c3a-7f74e40aee19.png">
+<img align="left" width="999" height="275" src="https://user-images.githubusercontent.com/95466780/205482870-9aff08d2-0f66-41c7-8f18-a8b17d98a82f.png">
 <img align="left" width="999" height="195" src="https://user-images.githubusercontent.com/95466780/205479933-aabf7cc2-39a8-49e4-8c8d-aa1c6222a9f8.png">
 <img align="left" width="999" height="161" src="https://user-images.githubusercontent.com/95466780/205475998-fc46bb51-5bfe-4908-ac3a-a5a3aa503f3d.png">
 <img align="left" width="999" height="77" src="https://user-images.githubusercontent.com/95466780/205475994-26e60314-edd4-4a28-a9fb-ae3e10c3ac9d.png">

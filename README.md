@@ -236,7 +236,7 @@ proc do_uf {nick uhost hand chan text} {
    }
    set my_uf [set ::env(TERM) linux ; exec ufetch-raspbian]
    foreach line [split $my_uf \n] {
-      putserv "PRIVMSG $chan :$line"
+      putnow "PRIVMSG $chan :$line"
    }
 }
 bind pub m|m !ufd do_ufd
@@ -247,9 +247,9 @@ proc do_ufd {nick uhost hand chan text} {
                  return 0
          } else {
    }
-   set my_ufd [set ::env(TERM) dumb ; exec ufetch-linux]
-   foreach line [split my_ufd \n] {
-      putserv "PRIVMSG $chan :$line"
+   set my_ufd [set ::env(TERM) dumb ; exec ufetch-raspbian]
+   foreach line [split $my_ufd \n] {
+      putnow "PRIVMSG $chan :$line"
    }
 }
 
